@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carbon - Admin Template</title>
+    <link rel="stylesheet" href="__STATIC__/css/styles.css">
+        <link rel="stylesheet" href="__STATIC__/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="__STATIC__/vendor/font-awesome/css/fontawesome-all.min.css">
+
+    {load href="__STATIC__/admin//uploadify/uploadify.css" /}
+</head>
+<body class="sidebar-fixed header-fixed">
+<div class="page-wrapper">
+	{include file="public/_head"}
+    
+    <div class="main-container">
+        {include file="public/_sidebar"}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                添加任务
+                            </div>
+
+                            <div class="card-body">
+                                <div class="row mt-7">
+                                    <div class="col-md-7">
+
+                                        <form id="form-admin-add" method="post" action="#">
+                                            <div class="form-group">
+                                            <label for="placeholder-input " class="form-control-label">任务标题:</label>
+                                            <input id="placeholder-input" class="form-control" placeholder="litteTitle" name="litteTitle" id="litteTitle">
+                                            </div>
+
+                                            <div class="form-group">
+                                            <label for="placeholder-input" class="form-control-label">简略标题：</label>
+                                            <input id="placeholder-input" class="form-control" placeholder="samll_title" name="samll_title" name="samll_title">
+                                            </div>
+
+                                            <div class="form-group">
+                                            <label for="placeholder-input" class="form-control-label">分类栏目：</label>
+                                                <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+                                                    <select name="catid" class="select">
+                  
+                                                    </select>
+                                                    </span> 
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="placeholder-input" class="form-control-label">任务详细：</label>
+                                                <div class="col-md-15">
+                                                    <textarea name="description" cols="" rows="6" class="form-control" id="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" ></textarea>
+                                                    <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="placeholder-input" class="form-control-label">允许评论：</label>
+                                                <div class="check-box">
+                                                    <input type="checkbox" id="is_allowcomments" name="is_allowcomments" value="1">
+                                                    <label for="checkbox-pinglun">&nbsp;</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="placeholder-input" class="form-control-label">缩略图：</label>
+                                                <div class="formControls col-xs-8 col-sm-9">
+                                                    <input id="file_upload"  type="file" multiple="true" >
+                                                    <img style="display: none" id="upload_org_code_img" src="" width="150" height="150">
+                                                    <input id="file_upload_image" name="image" type="hidden" multiple="true" value="">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                            <label for="placeholder-input" class="form-control-label">完成日期：</label>
+                                            <input id="placeholder-input" class="form-control" placeholder="deadline" name="deadline" name="deadline">
+                                            </div>
+
+
+
+                                            <div class="mb-7">
+                                            <button class="btn btn-outline-primary" type="submit">提交</button>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__STATIC__/vendor/jquery/jquery.min.js"></script>
+<script src="__STATIC__/vendor/popper.js/popper.min.js"></script>
+<script src="__STATIC__/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="__STATIC__/vendor/chart.js/chart.min.js"></script>
+<script src="__STATIC__/js/carbon.js"></script>
+<script src="__STATIC__/js/demo.js"></script>
+{load href="__STATIC__/admin/uploadify/jquery.uploadify.min.js" /}
+{load href="__STATIC__/admin/js/image.js" /}
+<script>
+    swf = '__STATIC__/admin/uploadify/uploadify.swf';
+    image_upload_url = "{:url('image/upload')}";
+</script>
+</body>
+</html>

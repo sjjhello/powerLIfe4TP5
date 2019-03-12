@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carbon - Admin Template</title>
+    <link rel="stylesheet" href="__STATIC__/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="__STATIC__/vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="__STATIC__/css/styles.css">
+</head>
+<body class="sidebar-fixed header-fixed">
+<div class="page-wrapper">
+	{include file="public/_head"}
+    
+    <div class="main-container">
+        {include file="public/_sidebar"}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                添加管理员
+                            </div>
+
+                            <div class="card-body">
+                                <div class="row mt-7">
+                                    <div class="col-md-7">
+                                        <form id="form-admin-add" method="post" action="{:url('admin/add')}">
+                                            <div class="form-group">
+                                            <label for="placeholder-input " class="form-control-label">管理员名:</label>
+                                            <input id="placeholder-input" class="form-control" placeholder="username" name="username" id="username">
+                                            </div>
+
+                                            <div class="form-group">
+                                            <label for="placeholder-input" class="form-control-label">密码:</label>
+                                            <input id="placeholder-input" type="password" class="form-control" placeholder="password" name="password" name="password">
+                                            </div>
+
+                                            <div class="mb-7">
+                                            <button class="btn btn-outline-primary" type="submit">提交</button>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__STATIC__/vendor/jquery/jquery.min.js"></script>
+<script src="__STATIC__/vendor/popper.js/popper.min.js"></script>
+<script src="__STATIC__/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="__STATIC__/vendor/chart.js/chart.min.js"></script>
+<script src="__STATIC__/js/carbon.js"></script>
+<script src="__STATIC__/js/demo.js"></script>
+</body>
+</html>
